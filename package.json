@@ -1,0 +1,27 @@
+{
+  "name": "just-nu-slack-command",
+  "version": "1.0.0",
+  "description": "Webtask to handle Slack command for /justnu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enjikaka/just-nu-slack-command.git"
+  },
+  "keywords": [
+    "slack",
+    "aftonbladet",
+    "justnu",
+    "expressen",
+    "schibsted",
+    "trams-nyheter"
+  ],
+  "author": "Jeremy Karlsson <karlsson@jeremy.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enjikaka/just-nu-slack-command/issues"
+  },
+  "homepage": "https://github.com/enjikaka/just-nu-slack-command#readme"
+}
