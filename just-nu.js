@@ -47,4 +47,4 @@ app.post('/', async (req, res) => {
   }
 });
 
-export default WebtaskTools.fromExpress(app);
+module.exports = WebtaskTools.fromExpress(app);
