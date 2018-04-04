@@ -18,18 +18,7 @@ const getJustNus = () => new Promise((resolve, reject) => {
 app.post('/', async (req, res) => {
   try {
     const { count, topics } = await getJustNus();
-    const headlines = topics.map(topic => {
-      const subtitles = topic.subtitles.map(({ subtitle }) => {
-        return `\t :arrow_right: ${subtitle}`;
-      });
-
-      const attachment = {
-        text: `
-          *${topic.header}*:\n
-          ${subtitles.join('\n')}
-        `
-      };
-    });
+    const headlines = topics.map(text => ({ text }));
 
     res.status(200).send({
       'response_type': 'in_channel',
