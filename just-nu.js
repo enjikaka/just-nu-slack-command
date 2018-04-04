@@ -4,9 +4,6 @@ const WebtaskTools  = require('webtask-tools');
 
 const app = express();
 
-const botName = 'Aftonbladet';
-const aftonbladetAppIconURL = 'https://gfx.aftonbladet-cdn.se/assets/gfx/social/abAppIcon.png';
-
 app.post('/', async (req, res) => {
   try {
     const { count, topics } = await justNu();
@@ -15,13 +12,7 @@ app.post('/', async (req, res) => {
     res.status(200).send({
       'response_type': 'in_channel',
       'text': 'Antal "JUST NU" just nu: ' + count,
-      'attachments': [
-        {
-          'username': botName,
-          'icon_url': aftonbladetAppIconURL
-        },
-        ...headlines
-      ]
+      'attachments': headlines
     });
   } catch (error) {
     res.status(500).end(JSON.stringify(error));
