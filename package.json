@@ -2,9 +2,9 @@
   "name": "just-nu-slack-command",
   "version": "1.0.0",
   "description": "Webtask to handle Slack command for /justnu",
-  "main": "index.js",
+  "main": "just-nu.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "wt create just-nu"
   },
   "repository": {
     "type": "git",
