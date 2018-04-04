@@ -7,17 +7,9 @@ const app = express();
 const botName = 'Aftonbladet';
 const aftonbladetAppIconURL = 'https://gfx.aftonbladet-cdn.se/assets/gfx/social/abAppIcon.png';
 
-const getJustNus = () => new Promise((resolve, reject) => {
-  try {
-    justNu(data => resolve(data));
-  } catch (error) {
-    reject(error);
-  }
-});
-
 app.post('/', async (req, res) => {
   try {
-    const { count, topics } = await getJustNus();
+    const { count, topics } = await justNu();
     const headlines = topics.map(text => ({ text }));
 
     res.status(200).send({
