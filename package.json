@@ -4,7 +4,7 @@
   "description": "Webtask to handle Slack command for /justnu",
   "main": "just-nu.js",
   "scripts": {
-    "deploy": "wt create just-nu"
+    "deploy": "wt create -p node8 just-nu"
   },
   "repository": {
     "type": "git",
