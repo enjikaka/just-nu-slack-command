@@ -1,6 +1,6 @@
 {
   "name": "just-nu-slack-command",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Webtask to handle Slack command for /justnu",
   "main": "just-nu.js",
   "scripts": {
